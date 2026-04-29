@@ -1,0 +1,16 @@
+<p>signal works!</p>
+
+<p>{{courseName}}</p>
+
+<p>Version : {{version()}}</p>
+
+<p>Duration : {{courseDuration()}}</p>
+
+<button (click)="changeDuration()" >Change Duration</button>
+
+<br>
+
+<p>Cities List : {{cityList}}</p>
+<button style="cursor: pointer;" (click)="addCity('Hyderabad')" >Add City Hyderabad</button>
+
+<p>New Cities List : {{showCityList()}}</p>

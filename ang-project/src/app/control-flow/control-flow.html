@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-3">
+        <select [(ngModel)]="selectedOption" class="form-select">
+            <option>ABC</option>
+            <option>PQR</option>
+            <option>XYZ</option>
+            <option>other</option>
+        </select>
+    </div>
+
+    <div class="col-3">
+        <p>option : {{selectedOption}}</p>
+        @if(selectedOption == 'other'){
+            <input type="text" class="form-control bg-primary" placeholder="Other Value">
+        } @else if (selectedOption == 'ABC') {
+            <p>ABC</p>
+        } @else if (selectedOption == 'PQR') {
+            <p>PQR</p>
+        } @else if (selectedOption == 'XYZ') {
+            <p>XYZ</p>
+        }
+    </div>
+</div>
