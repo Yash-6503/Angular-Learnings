@@ -1,22 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div class="container bg-black text-white h-14">
-        <ul class="menu1 flex justify-around  ">
-            <li>Home</li>
-            <li>About</li>
-            <li>Services</li>
-            <li>Contact</li>
-            <li>View More</li>
-        </ul>
-    </div>
-</body>
-</html>
+<nav class="navbar max-w-full">
+  <div class="logo" routerLink="/">MyApp</div>
 
+  <ul class="nav-links">
+    <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+    <li><a routerLink="/admin" routerLinkActive="active">Admin</a></li>
+    <li><a routerLink="/user" routerLinkActive="active">User</a></li>
+    <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+    <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+    <li><a routerLink="/signal" routerLinkActive="active">Signal</a></li>
+    <li><a routerLink="/dataBinding" routerLinkActive="active">Data-Binding</a></li>
+    <li><a routerLink="/controlFlow" routerLinkActive="active">Control-Flow</a></li>
+  </ul>
+</nav>
 
-<!-- Explore angular 16, 17, differences  -->
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

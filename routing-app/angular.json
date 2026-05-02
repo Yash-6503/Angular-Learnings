@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "ang-project": {
+    "routing-app": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -25,9 +25,17 @@
               }
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/styles.css"
-            ]
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+            ],
+            "server": "src/main.server.ts",
+            "outputMode": "server",
+            "security": {
+              "allowedHosts": []
+            },
+            "ssr": {
+              "entry": "src/server.ts"
+            }
           },
           "configurations": {
             "production": {
@@ -57,10 +65,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "ang-project:build:production"
+              "buildTarget": "routing-app:build:production"
             },
             "development": {
-              "buildTarget": "ang-project:build:development"
+              "buildTarget": "routing-app:build:development"
             }
           },
           "defaultConfiguration": "development"

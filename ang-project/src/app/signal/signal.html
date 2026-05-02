@@ -11,6 +11,22 @@
 <br>
 
 <p>Cities List : {{cityList}}</p>
-<button style="cursor: pointer;" (click)="addCity('Hyderabad')" >Add City Hyderabad</button>
+<input type="text" [(ngModel)]="cityName" style="background-color: grey; color:white;">
+<button style="cursor: pointer;" (click)="addCity(cityName)"  >Add New City</button>
 
-<p>New Cities List : {{showCityList()}}</p>
+
+@if(cityList().length > 0){
+    <p>Cities List : </p>
+    <ul>
+
+        @for (city of cityList(); track city) {
+            <li>{{ city }}</li>
+        }
+    </ul>
+}
+
+<!-- @if(toggle() == true || toggle() == false ){
+    <p>New Cities List : {{showCityList()}}</p>
+}@else{
+    <p>No updated citites...</p>
+} -->

@@ -1,0 +1,47 @@
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e293b;
+  padding: 12px 20px;
+  color: white;
+}
+
+/* Logo */
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Nav links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+/* Links */
+.nav-links a {
+  text-decoration: none;
+  color: #e2e8f0;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+/* Hover effect */
+.nav-links a:hover {
+  color: #38bdf8;
+}
+
+/* Active route */
+.active {
+  border-bottom: 2px solid #38bdf8;
+  color: #38bdf8;
+}
+
+/* Page content */
+.container {
+  padding: 20px;
+}
